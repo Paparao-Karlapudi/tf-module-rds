@@ -35,9 +35,9 @@ resource "aws_rds_cluster" "rds" {
   engine             = var.engine
   engine_version     = var.engine_version
   db_cluster_instance_class = var.instance_class
-  storage_type       = "io1"
-  allocated_storage  = 20
-  iops               = 1000
+#  storage_type       = "io1"
+#  allocated_storage  = 20
+#  iops               = 1000
   master_username    = data.aws_ssm_parameter.DB_ADMIN_USER.arn
   master_password    = data.aws_ssm_parameter.DB_ADMIN_PASS.arn
   db_subnet_group_name = aws_db_subnet_group.default.name
